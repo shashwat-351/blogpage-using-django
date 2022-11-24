@@ -1,6 +1,10 @@
 from django.shortcuts import render
-
+from .models import blognews
 # Create your views here.
 
 def client(request):
-    return render(request,'client.html')
+    bnews = blognews.objects.all()
+    data = {
+        'bnews': bnews
+    }
+    return render(request,'client.html',data)

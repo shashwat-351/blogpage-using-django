@@ -11,7 +11,8 @@
 <body>
 <div>
     <header>{% include 'base/navbar.html'%}</header>
-    <footer><h3>this is footer</h3></footer>
+    {% block content%}{% endblock %}
+    <footer><h5>this is footer</h5></footer>
 </div>
 </body>
 </html>
