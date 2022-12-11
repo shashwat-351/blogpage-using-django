@@ -1,7 +1,21 @@
-{% extends 'base.html' %}
-{% block content %}
-{% for bnews in bnews %}
-<h2>{{bnews.title}}</h2>
-<p>{{bnews.content}}</p>
-{% endfor %}
-{% endblock %}
+<div class="d-flex flex-wrap justify-content-center">
+  {% for bnews in bnews %}
+
+   <!--
+    <div class="bg-dark text-white m-5">
+      <img width='350px' height='150px' src="{{bnews.image.url}}" alt="news image" />
+      <h2>{{bnews.title}}</h2>
+      <h2>{{bnews.post_by}}</h2>
+      <h2>{{bnews.posted_at}}</h2>
+      </div> 
+    -->
+  <div class="card mb-3">
+    <img src="{{bnews.image.url}}" class="card-img-top" alt="news image">
+    <div class="card-body">
+      <h5 class="card-title">{{bnews.title}}</h5>
+      <p class="card-text">{{bnews.content}}</p>
+      <p class="card-text"><small class="text-muted">{{bnews.post_by}} | {{bnews.posted_at}}</small></p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
