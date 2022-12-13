@@ -1,15 +1,29 @@
 {% load static %}
-<nav class="navbar navbar-expand-lg sticky-top bg-light">
+<nav class="navbar navbar-expand-lg sticky-top bg-light shadow-lg p-3 mb-5 bg-body rounded">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Blog IN</a>
+    <a class="navbar-brand" href="/">
+      <img src="/static/logo/logo.png" width="70" height="70"/><b>Blog IN</b>
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <a class="nav-link active" aria-current="page" href="/">Home</a>
+        <a class="nav-link" href="#news">Blog News</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Categories
+          </a>
+          <ul class="dropdown-menu shadow p-3 mb-5 bg-body rounded">
+            <li><a class="dropdown-item" href="#">AGENTS</a></li>
+            <li><a class="dropdown-item" href="#">MAP</a></li>
+            <li><a class="dropdown-item" href="#">ARSENAL</a></li>
+          </ul>
+        </li>
+        <a class="nav-link" href="https://valorantesports.com/">eSports</a>
         <a class="nav-link" href="#">About Us</a>
-        <a class="nav-link" href="#">Contact Us</a>
+        <a class="nav-link" href="/contact_us">Contact Us</a>
       </div>
     </div>
   </div>

@@ -9,19 +9,19 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href=" /static/favicon/apple-touch-icon.png"
+      href=" /static/favicon/180.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/static/favicon/favicon-32x32.png"
+      href="/static/favicon/32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/static/favicon/favicon-16x16.png"
+      href="/static/favicon/16.png"
     />
     <link rel="manifest" href="static/favicon/site.webmanifest" />
     <link
@@ -30,8 +30,10 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <limk href="/css/svg.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    
     <!-- CSS only -->
     <style>
       ::-webkit-scrollbar {
@@ -50,8 +52,43 @@
     <div>
       {% include 'base/banner.html' %}
     </div>
-    <div>{% include 'client.html' %}</div>
+    <!--<div class="container-fluid py-2">
+      <h2 class="font-weight-light">Bootstrap 5 Horizontal Scrolling Cards with Flexbox</h2>
+      <div class="d-flex flex-row flex-nowrap">
+          <div class="card card-body"><img src='/static/ln/l1.jpg' class="d-block w-20" alt="1st pic"></div>
+          <div class="card card-body">Card</div>
+          <div class="card card-body">Card</div>
+          ...
+      </div>-->
+    <div class="container px-5 text-center " id='news'>
+      <div class="row gx-5">
+        <div class='col hstack gap-5'>
+          <div>
+            <h5><b>Latest News</b></h5><br><br>
+          {% include 'client.html' %}
+          </div>
+          <div class='d-flex' style='height: 2700px;'>
+            <div class="vr"></div>
+          </div>
+        </div>
+        <div class='col s-5'>
+          <div class="card" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">An item</li>
+              <li class="list-group-item">A second item</li>
+              <li class="list-group-item">A third item</li>
+            </ul>
+            <div class="card-footer">
+            Card footer
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <footer >{% include 'base/footer.html' %}</footer>
+    <iframe width="0" height="0" src="/static/audio/theme1.mp3" frameborder="0" allowfullscreen></iframe>
+    <footer >
+      {% include 'base/footer.html' %} 
+    </footer>
   </body>
 </html>
